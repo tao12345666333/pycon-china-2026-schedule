@@ -106,6 +106,7 @@
           <span class="duration">{{ talk.talk_minutes }} 分钟分享 + {{ talk.qa_minutes }} 分钟 QA</span>
         </article>
         {% endfor %}
+        {% if breakouts[track_id].lightning %}
         <div class="slot lightning-block">
           <span class="time">{{ breakouts[track_id].lightning[0].start }}–{{ breakouts[track_id].lightning[-1].end }} · 闪电演讲</span>
           <div class="lightning-list">
@@ -118,6 +119,7 @@
             {% endfor %}
           </div>
         </div>
+        {% endif %}
       </section>
       {% endfor %}
     </div>

@@ -7,7 +7,7 @@ conference:
   date: "待确认"
   timezone: "Asia/Shanghai"
   start: "09:00"
-  end: "18:50"
+  end: "17:40"
   registration:
     start: "09:00"
     end: "09:30"
@@ -23,7 +23,7 @@ conference:
     end: "16:20"
     title: "茶歇"
     title_en: "Tea Break"
-  lightning_start: "18:20"
+  lightning_start: "17:00"
 
 tracks:
   main:
@@ -200,9 +200,9 @@ talks:
     title_en: "Migrating to Free-Threaded Python"
     type: "lightning"
     period: "afternoon"
-    track: "A"
-    start: "18:20"
-    end: "18:30"
+    track: "E"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -214,9 +214,9 @@ talks:
     title_en: "An Easy Introduction to the GIL and Free-Threading"
     type: "lightning"
     period: "afternoon"
-    track: "A"
-    start: "18:30"
-    end: "18:40"
+    track: "C"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -228,9 +228,9 @@ talks:
     title_en: "Testing Practices for Open Source Virtualization Infrastructure"
     type: "lightning"
     period: "afternoon"
-    track: "A"
-    start: "18:40"
-    end: "18:50"
+    track: "D"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -326,9 +326,9 @@ talks:
     title_en: "Your Coding Agent's History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "18:20"
-    end: "18:30"
+    track: "C"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -340,9 +340,9 @@ talks:
     title_en: "From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "18:30"
-    end: "18:40"
+    track: "D"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -354,9 +354,9 @@ talks:
     title_en: "Product Engineering in the Agent Era"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "18:40"
-    end: "18:50"
+    track: "E"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -439,8 +439,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "18:20"
-    end: "18:30"
+    start: "17:10"
+    end: "17:20"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -453,8 +453,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "18:30"
-    end: "18:40"
+    start: "17:20"
+    end: "17:30"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -467,8 +467,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "18:20"
-    end: "18:30"
+    start: "17:10"
+    end: "17:20"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -551,8 +551,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "18:20"
-    end: "18:30"
+    start: "17:10"
+    end: "17:20"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -565,8 +565,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "18:30"
-    end: "18:40"
+    start: "17:20"
+    end: "17:30"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -579,7 +579,7 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "18:30"
-    end: "18:40"
+    start: "17:20"
+    end: "17:30"
     talk_minutes: 10
     qa_minutes: 0
