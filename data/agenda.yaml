@@ -7,7 +7,7 @@ conference:
   date: "待确认"
   timezone: "Asia/Shanghai"
   start: "09:00"
-  end: "18:10"
+  end: "17:40"
   registration:
     start: "09:00"
     end: "09:30"
@@ -326,9 +326,9 @@ talks:
     title_en: "Your Coding Agent's History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "17:40"
-    end: "17:50"
+    track: "C"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -340,9 +340,9 @@ talks:
     title_en: "From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "17:50"
-    end: "18:00"
+    track: "D"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -354,9 +354,9 @@ talks:
     title_en: "Product Engineering in the Agent Era"
     type: "lightning"
     period: "afternoon"
-    track: "B"
-    start: "18:00"
-    end: "18:10"
+    track: "E"
+    start: "17:30"
+    end: "17:40"
     talk_minutes: 10
     qa_minutes: 0
 
