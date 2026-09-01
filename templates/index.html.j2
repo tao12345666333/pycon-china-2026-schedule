@@ -80,7 +80,7 @@
 
     <section class="main-stage" aria-label="上午主会场议程">
       <div class="stage-label">
-        <span>{{ agenda.tracks.main.name }} · {{ agenda.tracks.main.name_en }} · {{ agenda.tracks.main.description }}{% if agenda.tracks.main.location %} · {{ agenda.tracks.main.location }}{% endif %}</span>
+        <span>{{ agenda.tracks.main.name }} · {{ agenda.tracks.main.name_en }} · {{ agenda.tracks.main.description }} · {{ agenda.tracks.main.location }}</span>
         <span>{{ agenda.conference.registration.start }}–{{ agenda.conference.lunch.start }}</span>
       </div>
       <div class="slot break">
@@ -127,7 +127,7 @@
         <div class="track-head">
           <h3>{{ track_id }} · {{ track.name }}</h3>
           <p class="track-name-en" lang="en">{{ track.name_en }}</p>
-          {% if track.location %}<p class="track-location">{{ track.location }}</p>{% endif %}
+          <p class="track-location">{{ track.location }}</p>
           <p>{{ track.description }}</p>
         </div>
         {% for item in breakouts[track_id].before_break %}
