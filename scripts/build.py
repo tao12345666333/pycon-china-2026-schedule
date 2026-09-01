@@ -25,8 +25,8 @@ def validate(agenda: dict) -> None:
     tracks = agenda["tracks"]
     talks = agenda["talks"]
 
-    if len(talks) != 38:
-        raise ValueError(f"Expected 38 talks, found {len(talks)}")
+    if len(talks) != 46:
+        raise ValueError(f"Expected 46 talks, found {len(talks)}")
 
     ids = [talk["id"] for talk in talks]
     if len(ids) != len(set(ids)):
@@ -119,7 +119,7 @@ def build() -> None:
         key=lambda talk: minutes(talk["start"]),
     )
     breakouts = {}
-    for track_id in ("A", "B", "C", "D"):
+    for track_id in ("A", "B", "C", "D", "E"):
         track_talks = [talk for talk in talks if talk["track"] == track_id]
         breakouts[track_id] = {
             "standard": sorted(

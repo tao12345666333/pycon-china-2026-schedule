@@ -46,6 +46,10 @@ tracks:
     name: "产品生态与行业应用"
     name_en: "Product Ecosystem & Industry Applications"
     description: "平台制度、企业软件、DSL、Skills 与真实工作流"
+  E:
+    name: "开源社区与教育实践"
+    name_en: "Open Source Community & Education"
+    description: "社区建设、教育推广、项目实践与开发者成长"
 
 talks:
   - id: "yanjun-zhou"
@@ -575,6 +579,118 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
+    start: "18:40"
+    end: "18:50"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "track-e-talk-1"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "14:00"
+    end: "14:40"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "track-e-talk-2"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "14:40"
+    end: "15:20"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "track-e-talk-3"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "15:20"
+    end: "16:00"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "track-e-talk-4"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "16:20"
+    end: "17:00"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "track-e-talk-5"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "17:00"
+    end: "17:40"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "track-e-lightning-1"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "18:20"
+    end: "18:30"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "track-e-lightning-2"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "18:30"
+    end: "18:40"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "track-e-lightning-3"
+    speaker: "待定"
+    speaker_en: "TBD"
+    role: "待定"
+    title: "待定"
+    title_en: "TBD"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
     start: "18:40"
     end: "18:50"
     talk_minutes: 10
