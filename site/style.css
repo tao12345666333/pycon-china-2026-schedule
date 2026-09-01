@@ -135,18 +135,18 @@ code { padding: 2px 6px; border-radius: 5px; background: rgba(38,103,255,.09); }
 .track-head h3 { margin: 0 0 4px; font-size: 21px; line-height: 1.2; }
 .track-head p { margin: 7px 0 0; color: rgba(255,255,255,.82); font-size: 13px; }
 .track-head .track-name-en { margin-top: 0; color: rgba(255,255,255,.95); font-weight: 700; }
-.track-a .track-head { background: linear-gradient(130deg, #1e55cf, #347ff5); }
+.track-a .track-head,
+.track-e .track-head { background: linear-gradient(130deg, #1e55cf, #347ff5); }
 .track-b .track-head { background: linear-gradient(130deg, #087a69, #17a486); }
 .track-c .track-head { background: linear-gradient(130deg, #6c45b8, #9670dc); }
 .track-d .track-head { background: linear-gradient(130deg, #b45518, #e47a2e); }
-.track-e .track-head { background: linear-gradient(130deg, #ba3b4d, #e35d5d); }
 .track .slot { display: block; min-height: 190px; padding: 15px 16px; }
 .track .slot.lightning-block { min-height: 360px; }
 .track .time { display: block; margin-bottom: 7px; font-size: 13px; }
 .track-b .time { color: var(--green); }
 .track-c .time { color: var(--purple); }
 .track-d .time { color: var(--orange); }
-.track-e .time { color: #c54857; }
+.track-e .time { color: var(--blue); }
 .track .talk-title { font-size: 15px; }
 .track .talk-title-en { font-size: 12px; }
 .track .speaker { font-size: 12.5px; }
