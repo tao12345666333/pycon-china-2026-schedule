@@ -46,6 +46,10 @@ tracks:
     name: "产品生态与行业应用"
     name_en: "Product Ecosystem & Industry Applications"
     description: "平台制度、企业软件、DSL、Skills 与真实工作流"
+  E:
+    name: "Python 生态与 AI 工程"
+    name_en: "Python Ecosystem & AI Engineering"
+    description: "插件系统、ML 研究自动化、Agent 可靠性与 AI 能力平台"
 
 talks:
   - id: "yanjun-zhou"
@@ -182,9 +186,9 @@ talks:
     title_en: "Designing Plugin Systems for Python Packages"
     type: "standard"
     period: "afternoon"
-    track: "A"
-    start: "17:40"
-    end: "18:20"
+    track: "E"
+    start: "14:00"
+    end: "14:40"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -308,9 +312,9 @@ talks:
     title_en: "Automating ML Research with Agents on a Single GPU"
     type: "standard"
     period: "afternoon"
-    track: "B"
-    start: "17:40"
-    end: "18:20"
+    track: "E"
+    start: "14:40"
+    end: "15:20"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -420,9 +424,9 @@ talks:
     title_en: "When Your AI Agent Dies at 3 A.M. — Reliability Engineering for Agents"
     type: "standard"
     period: "afternoon"
-    track: "C"
-    start: "17:00"
-    end: "17:40"
+    track: "E"
+    start: "15:20"
+    end: "16:00"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -462,9 +466,9 @@ talks:
     title_en: "Let's Talk About Hash Functions in Python: Lessons from vLLM's Chained Hashing Evolution"
     type: "lightning"
     period: "afternoon"
-    track: "C"
-    start: "18:40"
-    end: "18:50"
+    track: "E"
+    start: "18:20"
+    end: "18:30"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -532,9 +536,9 @@ talks:
     title_en: "Making AI Capabilities Buildable, Reusable, and Collaborative: SenseTime Xiaohuanxiong Skill and Expert Team Developer Practices"
     type: "standard"
     period: "afternoon"
-    track: "D"
-    start: "17:00"
-    end: "17:40"
+    track: "E"
+    start: "16:20"
+    end: "17:00"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -574,8 +578,8 @@ talks:
     title_en: "Python Beyond Coding: Reshaping Kindergarten Teachers' Workflows with Python + AI"
     type: "lightning"
     period: "afternoon"
-    track: "D"
-    start: "18:40"
-    end: "18:50"
+    track: "E"
+    start: "18:30"
+    end: "18:40"
     talk_minutes: 10
     qa_minutes: 0

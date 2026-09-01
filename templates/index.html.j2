@@ -77,12 +77,12 @@
     </section>
 
     <div class="section-head">
-      <div><span class="eyebrow">Afternoon</span><h2>下午 · 四个分会场</h2></div>
+      <div><span class="eyebrow">Afternoon</span><h2>下午 · 五个分会场</h2></div>
       <p>14:00 同步开始，16:00–16:20 统一茶歇，18:20 统一进入闪电演讲。</p>
     </div>
 
     <div class="tracks">
-      {% for track_id in ["A", "B", "C", "D"] %}
+      {% for track_id in ["A", "B", "C", "D", "E"] %}
       {% set track = agenda.tracks[track_id] %}
       <section class="track track-{{ track_id | lower }}" aria-label="{{ track.name }}">
         <div class="track-head">
@@ -128,7 +128,7 @@
         <li>上午每场连续分享 40 分钟，不安排 QA。</li>
         <li>下午标准议题为 35 分钟分享 + 5 分钟 QA。</li>
         <li>下午茶歇统一为 16:00–16:20，所有闪电演讲统一在 18:20 后进行。</li>
-        <li>C、D 会场在 17:40 结束标准议题，18:20 开始闪电演讲；页面不设置额外活动。</li>
+        <li>C、D、E 会场在 17:40 结束标准议题，18:20 开始闪电演讲；页面不设置额外活动。</li>
       </ul>
     </aside>
   </main>

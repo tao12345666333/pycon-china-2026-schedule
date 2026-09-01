@@ -119,7 +119,7 @@ def build() -> None:
         key=lambda talk: minutes(talk["start"]),
     )
     breakouts = {}
-    for track_id in ("A", "B", "C", "D"):
+    for track_id in ("A", "B", "C", "D", "E"):
         track_talks = [talk for talk in talks if talk["track"] == track_id]
         breakouts[track_id] = {
             "standard": sorted(
