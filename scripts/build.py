@@ -20,10 +20,11 @@ def minutes(value: str) -> int:
     return hour * 60 + minute
 
 
-def validate(agenda: dict) -> None:
+def validate(agenda: dict) -> list[str]:
     conference = agenda["conference"]
     tracks = agenda["tracks"]
     talks = agenda["talks"]
+    warnings: list[str] = []
 
     conference_start = minutes(conference["start"])
     conference_end = minutes(conference["end"])
@@ -107,7 +108,7 @@ def validate(agenda: dict) -> None:
             if talk["track"] == "main":
                 raise ValueError(f"{talk['id']} needs an afternoon breakout track")
             if talk_start < lightning_start:
-                raise ValueError(f"{talk['id']} must be in the final lightning block")
+                raise ValueError(f"{talk['id']} starts before conference.lightning_start")
         else:
             raise ValueError(f"{talk['id']} has unsupported period/type values")
 
@@ -125,6 +126,10 @@ def validate(agenda: dict) -> None:
 
     tea_start = minutes(tea_break["start"])
     tea_end = minutes(tea_break["end"])
+    afternoon_span = (
+        min(minutes(talk["start"]) for talk in afternoon),
+        max(minutes(talk["end"]) for talk in afternoon),
+    )
 
     for track_id in tracks:
         track_talks = sorted(
@@ -136,22 +141,63 @@ def validate(agenda: dict) -> None:
                 raise ValueError(
                     f"Track {track_id} overlap: {previous['id']} and {current['id']}"
                 )
-        track_standard = [talk for talk in track_talks if talk["type"] == "standard"]
-        track_lightning = [talk for talk in track_talks if talk["type"] == "lightning"]
-        if track_standard and track_lightning:
-            if max(minutes(talk["end"]) for talk in track_standard) > min(
-                minutes(talk["start"]) for talk in track_lightning
-            ):
-                raise ValueError(f"Track {track_id} must place lightning talks last")
         if track_id != "main":
             for talk in track_talks:
                 if minutes(talk["start"]) < tea_end and minutes(talk["end"]) > tea_start:
                     raise ValueError(f"{talk['id']} overlaps the tea break")
+            warnings.extend(idle_windows(track_id, track_talks, afternoon_span, (tea_start, tea_end)))
+
+    return warnings
+
+
+def idle_windows(
+    track_id: str,
+    track_talks: list[dict],
+    span: tuple[int, int],
+    tea: tuple[int, int],
+) -> list[str]:
+    """Report stretches where a breakout room sits dark while other rooms run."""
+    if not track_talks:
+        return []
+    span_start, span_end = span
+    tea_start, tea_end = tea
+    busy = [(minutes(talk["start"]), minutes(talk["end"])) for talk in track_talks]
+    busy.append(tea)
+    busy.sort()
+
+    idle: list[str] = []
+    cursor = span_start
+    for start, end in busy:
+        if start > cursor:
+            idle.append(f"{cursor // 60:02d}:{cursor % 60:02d}–{start // 60:02d}:{start % 60:02d}")
+        cursor = max(cursor, end)
+    if cursor < span_end:
+        idle.append(f"{cursor // 60:02d}:{cursor % 60:02d}–{span_end // 60:02d}:{span_end % 60:02d}")
+    return [f"Track {track_id} has no programming during {window}" for window in idle]
+
+
+def timeline(track_talks: list[dict]) -> list[dict]:
+    """Order a room chronologically, collapsing back-to-back lightning talks into blocks."""
+    items: list[dict] = []
+    for talk in sorted(track_talks, key=lambda talk: minutes(talk["start"])):
+        if talk["type"] != "lightning":
+            items.append({"type": "standard", "talk": talk})
+            continue
+        if items and items[-1]["type"] == "lightning" and items[-1]["talks"][-1]["end"] == talk["start"]:
+            items[-1]["talks"].append(talk)
+        else:
+            items.append({"type": "lightning", "talks": [talk]})
+    for item in items:
+        if item["type"] == "lightning":
+            item["start"] = item["talks"][0]["start"]
+            item["end"] = item["talks"][-1]["end"]
+    return items
 
 
 def build() -> None:
     agenda = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8"))
-    validate(agenda)
+    for warning in validate(agenda):
+        print(f"warning: {warning}")
 
     talks = agenda["talks"]
     morning = sorted(
@@ -164,20 +210,12 @@ def build() -> None:
     breakouts = {}
     for track_id in track_ids:
         track_talks = [talk for talk in talks if talk["track"] == track_id]
-        standard = sorted(
-            (talk for talk in track_talks if talk["type"] == "standard"),
-            key=lambda talk: minutes(talk["start"]),
-        )
         breakouts[track_id] = {
-            "standard_before_break": [
-                talk for talk in standard if minutes(talk["end"]) <= tea_start
-            ],
-            "standard_after_break": [
-                talk for talk in standard if minutes(talk["start"]) >= tea_end
-            ],
-            "lightning": sorted(
-                (talk for talk in track_talks if talk["type"] == "lightning"),
-                key=lambda talk: minutes(talk["start"]),
+            "before_break": timeline(
+                [talk for talk in track_talks if minutes(talk["end"]) <= tea_start]
+            ),
+            "after_break": timeline(
+                [talk for talk in track_talks if minutes(talk["start"]) >= tea_end]
             ),
         }
 
@@ -186,7 +224,6 @@ def build() -> None:
         counts[talk["type"]] += 1
 
     afternoon = [talk for talk in talks if talk["period"] == "afternoon"]
-    lightning = [talk for talk in afternoon if talk["type"] == "lightning"]
     schedule = {
         "registration_minutes": minutes(agenda["conference"]["registration"]["end"])
         - minutes(agenda["conference"]["registration"]["start"]),
@@ -197,13 +234,19 @@ def build() -> None:
         "morning_end": morning[-1]["end"],
         "afternoon_start": min(afternoon, key=lambda talk: minutes(talk["start"]))["start"],
         "afternoon_end": max(afternoon, key=lambda talk: minutes(talk["end"]))["end"],
-        "lightning_start": agenda["conference"]["lightning_start"],
-        "lightning_tracks": [
-            track_id
+        "lightning_blocks": [
+            {
+                "track": track_id,
+                "start": item["start"],
+                "end": item["end"],
+                "count": len(item["talks"]),
+            }
             for track_id in track_ids
-            if any(talk["track"] == track_id for talk in lightning)
+            for item in breakouts[track_id]["before_break"] + breakouts[track_id]["after_break"]
+            if item["type"] == "lightning"
         ],
     }
+    schedule["lightning_blocks"].sort(key=lambda block: minutes(block["start"]))
 
     env = Environment(
         loader=FileSystemLoader(ROOT / "templates"),

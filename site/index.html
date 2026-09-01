@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -19,8 +20,8 @@
         签到与入场 09:00–09:30；
         上午主会场 09:30–12:10，下午 5 个分会场
         13:30–17:10。茶歇
-        15:30–15:50，闪电演讲最早于
-        16:30 开始。
+        15:30–15:50，12
+        场闪电演讲编成 3 个错时专场，可依次听完。
       </p>
       <div class="meta">
         <span class="pill">AI for Good</span>
@@ -112,312 +113,288 @@
     <div class="section-head">
       <div><span class="eyebrow">Afternoon</span><h2>下午 · 5 个分会场</h2></div>
       <p>13:30 开始，15:30–15:50
-        统一茶歇；C、D、E 会场于
-        16:30 起安排闪电演讲。</p>
+        统一茶歇。闪电演讲专场彼此错时安排在
+A 会场 13:30–14:10（4 场）、E 会场 14:50–15:30（4 场）、D 会场 15:50–16:30（4 场），
+        因此同一位听众可以完整听完全部 12 场闪电演讲。</p>
     </div>
 
     <div class="tracks">
-      <section class="track track-a" aria-label="Python 内核与系统工程">
+      <section class="track track-a" aria-label="Python 运行时、并发与系统">
         <div class="track-head">
-          <h3>A · Python 内核与系统工程</h3>
-          <p class="track-name-en" lang="en">Python Core &amp; Systems Engineering</p>
-          <p>聚焦 CPython 内核演进、并发与虚拟化实践、规则 DSL 与底层工程能力</p>
+          <h3>A · Python 运行时、并发与系统</h3>
+          <p class="track-name-en" lang="en">Python Runtime, Concurrency &amp; Systems</p>
+          <p>Free-Threading 专题贯穿全场，延伸至虚拟化、底层观测与存储系统</p>
         </div>
-        <article class="slot" id="edward-xu">
-  <span class="time">13:30–14:10</span>
+<div class="slot lightning-block">
+  <span class="time">13:30–14:10 · 闪电演讲 ×4</span>
+  <div class="lightning-list">
+    <article class="lightning-item" id="muyao-yu">
+      <h4 class="talk-title">13:30–13:40 · GIL 与 Free-Threading 浅显介绍</h4>
+      <p class="talk-title-en" lang="en">An Easy Introduction to the GIL and Free-Threading</p>
+      <p class="speaker">余沐垚 / Muyao Yu · 郑州市第二高级中学学生</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="luxiaowei">
+      <h4 class="talk-title">13:40–13:50 · 自由线程迁移指南</h4>
+      <p class="talk-title-en" lang="en">Migrating to Free-Threaded Python</p>
+      <p class="speaker">逯晓威 / Lu Xiaowei · 阿里云编译器团队高级开发工程师</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="xinyi-shen">
+      <h4 class="talk-title">13:50–14:00 · 基于 Python 运行时的 initramfs 与单文件 Linux 实现</h4>
+      <p class="talk-title-en" lang="en">Python-driven initramfs for Single-File Linux</p>
+      <p class="speaker">沈馨怡 / Xinyi Shen · 上海市进才中学学生，Linux/Python 重度用户</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="chao-zhou">
+      <h4 class="talk-title">14:00–14:10 · 开源虚拟化基础设施的测试体系实践</h4>
+      <p class="talk-title-en" lang="en">Testing Practices for Open Source Virtualization Infrastructure</p>
+      <p class="speaker">周超 / Chao Zhou · ZSvirt 项目发起人之一，ZStack 产品规划</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+  </div>
+</div><article class="slot" id="edward-xu">
+  <span class="time">14:10–14:50</span>
   <h4 class="talk-title">从 Free-Threading 切入 CPython 贡献</h4>
   <p class="talk-title-en" lang="en">Contributing to CPython through Free-Threading</p>
   <p class="speaker">徐祥祥 / Edward Xu · Citrix Senior Software Engineer</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="nagato-yuzuru">
-  <span class="time">14:10–14:50</span>
-  <h4 class="talk-title">别在 YAML 里手写解释器：把规则写成一门内嵌 DSL</h4>
-  <p class="talk-title-en" lang="en">Stop Writing Interpreters in YAML: Rules as an Embedded DSL</p>
-  <p class="speaker">陈长 / Nagato Yuzuru · TerraQuanta 后端与基础设施工程师</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="yuchen-zheng">
+</article><article class="slot" id="hongfu-wang">
   <span class="time">14:50–15:30</span>
-  <h4 class="talk-title">使用 Python 观测 QEMU Guest 的状态</h4>
-  <p class="talk-title-en" lang="en">Monitoring QEMU Guest State using Python</p>
-  <p class="speaker">郑雨辰 / Yuchen Zheng · 半导体行业相关从业者</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot break">
-          <span class="time">15:30–15:50</span>
-          <p class="talk-title">茶歇 · 20 分钟</p>
-          <p class="talk-title-en" lang="en">Tea Break</p>
-        </div>
-        <article class="slot" id="hongfu-wang">
-  <span class="time">15:50–16:30</span>
   <h4 class="talk-title">让我们自由自在地并发</h4>
   <p class="talk-title-en" lang="en">Let Concurrency Be Free</p>
   <p class="speaker">王宏府 / Hongfu Wang · 苏州语灵人工智能科技有限公司后端工程师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="wayne-gao">
-  <span class="time">16:30–17:10</span>
+</article>        <div class="slot break">
+          <span class="time">15:30–15:50</span>
+          <p class="talk-title">茶歇 · 20 分钟</p>
+          <p class="talk-title-en" lang="en">Tea Break</p>
+        </div>
+<article class="slot" id="wayne-gao">
+  <span class="time">15:50–16:30</span>
   <h4 class="talk-title">下一代 Hadoop 存储：基于 BlueField-3 与 CSAL 的性能与可靠性升级</h4>
   <p class="talk-title-en" lang="en">Next-Gen Hadoop Storage: BlueField-3 and CSAL for Performance and Resilience</p>
   <p class="speaker">Wayne Gao · Solidigm 首席工程师兼存储解决方案架构师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-      </section>
-      <section class="track track-b" aria-label="Agent 架构与开发工具">
+</article><article class="slot" id="yuchen-zheng">
+  <span class="time">16:30–17:10</span>
+  <h4 class="talk-title">使用 Python 观测 QEMU Guest 的状态</h4>
+  <p class="talk-title-en" lang="en">Monitoring QEMU Guest State using Python</p>
+  <p class="speaker">郑雨辰 / Yuchen Zheng · 半导体行业相关从业者</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article>      </section>
+      <section class="track track-b" aria-label="Agent 工程：协议、运行时与可靠性">
         <div class="track-head">
-          <h3>B · Agent 架构与开发工具</h3>
-          <p class="track-name-en" lang="en">Agent Architecture &amp; Developer Tools</p>
-          <p>围绕 Agent 协议标准、运行时设计、评测 Harness 与开发者工具链协同</p>
+          <h3>B · Agent 工程：协议、运行时与可靠性</h3>
+          <p class="track-name-en" lang="en">Agent Engineering: Protocols, Runtime &amp; Reliability</p>
+          <p>从互操作协议到运行时与 Harness，最终收束到生产环境可靠性</p>
         </div>
-        <article class="slot" id="jun-han">
+<article class="slot" id="jun-han">
   <span class="time">13:30–14:10</span>
   <h4 class="talk-title">打破工具壁垒：Agent Client Protocol (ACP) 让任何 IDE 连上任何 Agent</h4>
   <p class="talk-title-en" lang="en">Breaking Tool Barriers: Agent Client Protocol (ACP) Connects Any IDE to Any Agent</p>
   <p class="speaker">韩骏 / Jun Han · 微软开发平台事业部高级软件工程师，VS Code 中文社区创始人</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="mew">
+</article><article class="slot" id="mew">
   <span class="time">14:10–14:50</span>
   <h4 class="talk-title">作为 Agent 交互方式的 Python Runtime</h4>
   <p class="talk-title-en" lang="en">Python Runtime as the Interaction Layer for Agents</p>
   <p class="speaker">mew · 算法工程师，AI 架构师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="gongmin-liu">
+</article><article class="slot" id="yubin-zheng">
   <span class="time">14:50–15:30</span>
-  <h4 class="talk-title">面向长周期软件交付的 Multi-Agent Harness</h4>
-  <p class="talk-title-en" lang="en">A Multi-Agent Harness for Long-Cycle Software Delivery</p>
-  <p class="speaker">刘功民 / Gongmin Liu · Agent 架构师</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot break">
-          <span class="time">15:30–15:50</span>
-          <p class="talk-title">茶歇 · 20 分钟</p>
-          <p class="talk-title-en" lang="en">Tea Break</p>
-        </div>
-        <article class="slot" id="yubin-zheng">
-  <span class="time">15:50–16:30</span>
   <h4 class="talk-title">从 Python Agent 到 Agent Harness：当 AI 开始真正执行任务</h4>
   <p class="talk-title-en" lang="en">From Python Agent to Agent Harness: When AI Starts Executing Real Tasks</p>
   <p class="speaker">郑予彬 / Yubin Zheng · 亚马逊云科技资深开发者布道师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="zhixiang-xu">
-  <span class="time">16:30–17:10</span>
-  <h4 class="talk-title">Code Agent 的 Context Management</h4>
-  <p class="talk-title-en" lang="en">Context Management for Code Agents</p>
-  <p class="speaker">许智翔 / Zhixiang Xu · Code Agent 实践者</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-      </section>
-      <section class="track track-c" aria-label="数据智能与知识基础设施">
-        <div class="track-head">
-          <h3>C · 数据智能与知识基础设施</h3>
-          <p class="track-name-en" lang="en">Data Intelligence &amp; Knowledge Infrastructure</p>
-          <p>关注数据质量治理、知识基础设施、向量计算与 AI 系统可靠性</p>
-        </div>
-        <article class="slot" id="manjusaka-li">
-  <span class="time">13:30–14:10</span>
-  <h4 class="talk-title">聊一下数据校验的边界：Pydantic 大吐槽</h4>
-  <p class="talk-title-en" lang="en">Let&#39;s Talk About the Boundaries of Data Validation — A Pydantic Rant</p>
-  <p class="speaker">李者璈 / Manjusaka Li · Freelancer，开源爱好者</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="shihuan-zhang">
-  <span class="time">14:10–14:50</span>
-  <h4 class="talk-title">AI 指导交易：面对量化，何以中观？</h4>
-  <p class="talk-title-en" lang="en">AI-Guided Trading: How Can We Approach Quant Investing from a Meso Perspective?</p>
-  <p class="speaker">张士欢 / Shihuan Zhang · 量化从业者</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="weizhen-wang">
-  <span class="time">14:50–15:30</span>
-  <h4 class="talk-title">Skein：为 AI 时代打造的嵌入式知识数据库</h4>
-  <p class="talk-title-en" lang="en">Skein: An Embedded Knowledge Database Built for the AI Era</p>
-  <p class="speaker">王维真 / Weizhen Wang · Co-founder &amp; CTO, Nowledge Labs</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot break">
+</article>        <div class="slot break">
           <span class="time">15:30–15:50</span>
           <p class="talk-title">茶歇 · 20 分钟</p>
           <p class="talk-title-en" lang="en">Tea Break</p>
         </div>
-        <article class="slot" id="zeyao-han">
+<article class="slot" id="gongmin-liu">
   <span class="time">15:50–16:30</span>
-  <h4 class="talk-title">从算力到智能体：沐曦开源学习项目实战</h4>
-  <p class="talk-title-en" lang="en">From Compute Power to AI Agents: Hands-on Open Source Learning Projects with MetaX</p>
-  <p class="speaker">韩泽耀 / Zeyao Han · 沐曦股份应用生态负责人</p>
+  <h4 class="talk-title">面向长周期软件交付的 Multi-Agent Harness</h4>
+  <p class="talk-title-en" lang="en">A Multi-Agent Harness for Long-Cycle Software Delivery</p>
+  <p class="speaker">刘功民 / Gongmin Liu · Agent 架构师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot lightning-block">
-          <span class="time">16:30–17:10 · 闪电演讲</span>
-          <div class="lightning-list">
-            <article class="lightning-item" id="muyao-yu">
-              <h4 class="talk-title">16:30–16:40 · GIL 与 Free-Threading 浅显介绍</h4>
-              <p class="talk-title-en" lang="en">An Easy Introduction to the GIL and Free-Threading</p>
-              <p class="speaker">余沐垚 / Muyao Yu · 郑州市第二高级中学学生</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="yihong-yuan">
-              <h4 class="talk-title">16:40–16:50 · PySide6 开发的数据挖掘桌面端 AI Agent：Xenix</h4>
-              <p class="talk-title-en" lang="en">Xenix: A Data Mining Desktop AI Agent Built with PySide6</p>
-              <p class="speaker">袁翊闳 / Yihong Yuan · 广东外语外贸大学学生</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="hong-yi">
-              <h4 class="talk-title">16:50–17:00 · From vector to cuVS</h4>
-              <p class="talk-title-en" lang="en">From Vector to cuVS</p>
-              <p class="speaker">伊洪 / Hong Yi · 开源爱好者</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="yuu">
-              <h4 class="talk-title">17:00–17:10 · Coding Agent 的历史应当成为基础设施：为 Agent 和人类建立可信的 Session 检索层</h4>
-              <p class="talk-title-en" lang="en">Your Coding Agent&#39;s History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans</p>
-              <p class="speaker">Yuu · Dify 实习生</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="track track-d" aria-label="产品生态与行业应用">
+</article><article class="slot" id="jintao-zhang">
+  <span class="time">16:30–17:10</span>
+  <h4 class="talk-title">当 Agent 失联在凌晨三点：AI Agent 的可靠性工程</h4>
+  <p class="talk-title-en" lang="en">When Your AI Agent Dies at 3 A.M. — Reliability Engineering for Agents</p>
+  <p class="speaker">张晋涛 / Jintao Zhang · CNCF Ambassador、Microsoft MVP</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article>      </section>
+      <section class="track track-c" aria-label="数据、上下文与知识基础设施">
         <div class="track-head">
-          <h3>D · 产品生态与行业应用</h3>
-          <p class="track-name-en" lang="en">Product Ecosystem &amp; Industry Applications</p>
-          <p>覆盖产品平台化建设、行业落地案例、企业工作流与团队工程实践</p>
+          <h3>C · 数据、上下文与知识基础设施</h3>
+          <p class="track-name-en" lang="en">Data, Context &amp; Knowledge Infrastructure</p>
+          <p>数据建模与校验、上下文工程、知识库，以及数据智能的真实落地</p>
         </div>
-        <article class="slot" id="yanli">
+<article class="slot" id="zhixiang-xu">
+  <span class="time">13:30–14:10</span>
+  <h4 class="talk-title">Code Agent 的 Context Management</h4>
+  <p class="talk-title-en" lang="en">Context Management for Code Agents</p>
+  <p class="speaker">许智翔 / Zhixiang Xu · Code Agent 实践者</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article><article class="slot" id="weizhen-wang">
+  <span class="time">14:10–14:50</span>
+  <h4 class="talk-title">Skein：为 AI 时代打造的嵌入式知识数据库</h4>
+  <p class="talk-title-en" lang="en">Skein: An Embedded Knowledge Database Built for the AI Era</p>
+  <p class="speaker">王维真 / Weizhen Wang · Co-founder &amp; CTO, Nowledge Labs</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article><article class="slot" id="manjusaka-li">
+  <span class="time">14:50–15:30</span>
+  <h4 class="talk-title">聊一下数据校验的边界：Pydantic 大吐槽</h4>
+  <p class="talk-title-en" lang="en">Let&#39;s Talk About the Boundaries of Data Validation — A Pydantic Rant</p>
+  <p class="speaker">李者璈 / Manjusaka Li · Freelancer，开源爱好者</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article>        <div class="slot break">
+          <span class="time">15:30–15:50</span>
+          <p class="talk-title">茶歇 · 20 分钟</p>
+          <p class="talk-title-en" lang="en">Tea Break</p>
+        </div>
+<article class="slot" id="himanshu-sangshetti">
+  <span class="time">15:50–16:30</span>
+  <h4 class="talk-title">用智能体在单卡 GPU 上自动做机器学习研究</h4>
+  <p class="talk-title-en" lang="en">Automating ML Research with Agents on a Single GPU</p>
+  <p class="speaker">Himanshu Sangshetti · Mem0 AI 工程师</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article><article class="slot" id="shihuan-zhang">
+  <span class="time">16:30–17:10</span>
+  <h4 class="talk-title">AI 指导交易：面对量化，何以中观？</h4>
+  <p class="talk-title-en" lang="en">AI-Guided Trading: How Can We Approach Quant Investing from a Meso Perspective?</p>
+  <p class="speaker">张士欢 / Shihuan Zhang · 量化从业者</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article>      </section>
+      <section class="track track-d" aria-label="产品、能力生态与行业应用">
+        <div class="track-head">
+          <h3>D · 产品、能力生态与行业应用</h3>
+          <p class="track-name-en" lang="en">Products, Capability Ecosystems &amp; Industry</p>
+          <p>Agent 产品与制度设计、企业软件、厂商能力生态与一线工作流</p>
+        </div>
+<article class="slot" id="yanli">
   <span class="time">13:30–14:10</span>
   <h4 class="talk-title">如何设计 Agent 制度体系与运行平台</h4>
   <p class="talk-title-en" lang="en">How to Design the Institution &amp; Platform for Agents</p>
   <p class="speaker">盐粒 Yanli / Yanli · Dify.ai</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="jianfeng-wang">
+</article><article class="slot" id="zeyao-han">
   <span class="time">14:10–14:50</span>
+  <h4 class="talk-title">从算力到智能体：沐曦开源学习项目实战</h4>
+  <p class="talk-title-en" lang="en">From Compute Power to AI Agents: Hands-on Open Source Learning Projects with MetaX</p>
+  <p class="speaker">韩泽耀 / Zeyao Han · 沐曦股份应用生态负责人</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article><article class="slot" id="jianfeng-wang">
+  <span class="time">14:50–15:30</span>
   <h4 class="talk-title">Odoo，企业信息化领域的 WordPress</h4>
   <p class="talk-title-en" lang="en">Odoo: The WordPress of Enterprise Digital Transformation</p>
   <p class="speaker">王剑峰 / Jianfeng Wang · 上海开源信息技术协会监事长，Odoo 中国社区发起人</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="yan-lu">
-  <span class="time">14:50–15:30</span>
-  <h4 class="talk-title">如何实现一个自己的 Python-DSL</h4>
-  <p class="talk-title-en" lang="en">How to Build Your Own Python DSL</p>
-  <p class="speaker">路晏 / Yan Lu · Python 工程实践者</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot break">
+</article>        <div class="slot break">
           <span class="time">15:30–15:50</span>
           <p class="talk-title">茶歇 · 20 分钟</p>
           <p class="talk-title-en" lang="en">Tea Break</p>
         </div>
-        <article class="slot" id="wenyang-wang">
-  <span class="time">15:50–16:30</span>
-  <h4 class="talk-title">Python DSL 添加 LSP 总共分几步</h4>
-  <p class="talk-title-en" lang="en">How Many Steps Does It Take to Add LSP to a Python DSL?</p>
-  <p class="speaker">王文洋 / Wenyang Wang · AI Inference 工程师</p>
+<div class="slot lightning-block">
+  <span class="time">15:50–16:30 · 闪电演讲 ×4</span>
+  <div class="lightning-list">
+    <article class="lightning-item" id="yihong-yuan">
+      <h4 class="talk-title">15:50–16:00 · PySide6 开发的数据挖掘桌面端 AI Agent：Xenix</h4>
+      <p class="talk-title-en" lang="en">Xenix: A Data Mining Desktop AI Agent Built with PySide6</p>
+      <p class="speaker">袁翊闳 / Yihong Yuan · 广东外语外贸大学学生</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="zhiwei-chen">
+      <h4 class="talk-title">16:00–16:10 · 从选择器到语义：用 Python 实现视觉增强的 WebUI 测试</h4>
+      <p class="talk-title-en" lang="en">From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python</p>
+      <p class="speaker">陈志伟 / Zhiwei Chen · AI 开发工程师</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="quan-yang">
+      <h4 class="talk-title">16:10–16:20 · Agent 时代的产品工程</h4>
+      <p class="talk-title-en" lang="en">Product Engineering in the Agent Era</p>
+      <p class="speaker">杨权 / Quan Yang · 同声智能创始人</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="wei-yue">
+      <h4 class="talk-title">16:20–16:30 · Python 不只是写代码：用 Python + AI 重塑幼儿园教师的工作流</h4>
+      <p class="talk-title-en" lang="en">Python Beyond Coding: Reshaping Kindergarten Teachers&#39; Workflows with Python + AI</p>
+      <p class="speaker">岳炜 / Wei Yue · 教师，幼儿园技术支持</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+  </div>
+</div><article class="slot" id="wangqun-pan">
+  <span class="time">16:30–17:10</span>
+  <h4 class="talk-title">让 AI 能力可构建、可复用、可协作：商汤小浣熊 Skill 与专家团开发者实践</h4>
+  <p class="talk-title-en" lang="en">Making AI Capabilities Buildable, Reusable, and Collaborative: SenseTime Xiaohuanxiong Skill and Expert Team Developer Practices</p>
+  <p class="speaker">潘王群 / Wangqun Pan · 商汤科技高级产品运营经理、小浣熊家族开发者生态负责人</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot lightning-block">
-          <span class="time">16:30–17:10 · 闪电演讲</span>
-          <div class="lightning-list">
-            <article class="lightning-item" id="chao-zhou">
-              <h4 class="talk-title">16:30–16:40 · 开源虚拟化基础设施的测试体系实践</h4>
-              <p class="talk-title-en" lang="en">Testing Practices for Open Source Virtualization Infrastructure</p>
-              <p class="speaker">周超 / Chao Zhou · ZSvirt 项目发起人之一，ZStack 产品规划</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="zeyang-lin">
-              <h4 class="talk-title">16:40–16:50 · 是时候学点 Rust 了：从让 pip install 变快说起</h4>
-              <p class="talk-title-en" lang="en">It&#39;s Time to Learn (Some) Rust — Starting from a Faster pip install</p>
-              <p class="speaker">林泽阳 / Zeyang Lin · 独立开发者</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="xinyi-shen">
-              <h4 class="talk-title">16:50–17:00 · 基于 Python 运行时的 initramfs 与单文件 Linux 实现</h4>
-              <p class="talk-title-en" lang="en">Python-driven initramfs for Single-File Linux</p>
-              <p class="speaker">沈馨怡 / Xinyi Shen · 上海市进才中学学生，Linux/Python 重度用户</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="zhiwei-chen">
-              <h4 class="talk-title">17:00–17:10 · 从选择器到语义：用 Python 实现视觉增强的 WebUI 测试</h4>
-              <p class="talk-title-en" lang="en">From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python</p>
-              <p class="speaker">陈志伟 / Zhiwei Chen · AI 开发工程师</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="track track-e" aria-label="Python 生态与 AI 工程">
+</article>      </section>
+      <section class="track track-e" aria-label="Python 语言、工具链与性能">
         <div class="track-head">
-          <h3>E · Python 生态与 AI 工程</h3>
-          <p class="track-name-en" lang="en">Python Ecosystem &amp; AI Engineering</p>
-          <p>面向 Python + AI 工程实战，讨论生态集成、能力平台与生产级稳定性</p>
+          <h3>E · Python 语言、工具链与性能</h3>
+          <p class="track-name-en" lang="en">Python Language, Toolchain &amp; Performance</p>
+          <p>插件系统与 DSL 专题：从造一门语言，到造它的工具链与性能</p>
         </div>
-        <article class="slot" id="frost-ming">
+<article class="slot" id="frost-ming">
   <span class="time">13:30–14:10</span>
   <h4 class="talk-title">Python 包的插件系统设计</h4>
   <p class="talk-title-en" lang="en">Designing Plugin Systems for Python Packages</p>
   <p class="speaker">明希 / Frost Ming · Python 开源开发者</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="himanshu-sangshetti">
+</article><article class="slot" id="yan-lu">
   <span class="time">14:10–14:50</span>
-  <h4 class="talk-title">用智能体在单卡 GPU 上自动做机器学习研究</h4>
-  <p class="talk-title-en" lang="en">Automating ML Research with Agents on a Single GPU</p>
-  <p class="speaker">Himanshu Sangshetti · Mem0 AI 工程师</p>
+  <h4 class="talk-title">如何实现一个自己的 Python-DSL</h4>
+  <p class="talk-title-en" lang="en">How to Build Your Own Python DSL</p>
+  <p class="speaker">路晏 / Yan Lu · Python 工程实践者</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <article class="slot" id="jintao-zhang">
-  <span class="time">14:50–15:30</span>
-  <h4 class="talk-title">当 Agent 失联在凌晨三点：AI Agent 的可靠性工程</h4>
-  <p class="talk-title-en" lang="en">When Your AI Agent Dies at 3 A.M. — Reliability Engineering for Agents</p>
-  <p class="speaker">张晋涛 / Jintao Zhang · CNCF Ambassador、Microsoft MVP</p>
-  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot break">
+</article><div class="slot lightning-block">
+  <span class="time">14:50–15:30 · 闪电演讲 ×4</span>
+  <div class="lightning-list">
+    <article class="lightning-item" id="luminolt">
+      <h4 class="talk-title">14:50–15:00 · 聊聊 Python 里的哈希函数：从 vLLM 链式哈希的演进说起</h4>
+      <p class="talk-title-en" lang="en">Let&#39;s Talk About Hash Functions in Python: Lessons from vLLM&#39;s Chained Hashing Evolution</p>
+      <p class="speaker">LuminolT · 上海交通大学计算机学院硕士研究生、TAI 成员</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="zeyang-lin">
+      <h4 class="talk-title">15:00–15:10 · 是时候学点 Rust 了：从让 pip install 变快说起</h4>
+      <p class="talk-title-en" lang="en">It&#39;s Time to Learn (Some) Rust — Starting from a Faster pip install</p>
+      <p class="speaker">林泽阳 / Zeyang Lin · 独立开发者</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="hong-yi">
+      <h4 class="talk-title">15:10–15:20 · From vector to cuVS</h4>
+      <p class="talk-title-en" lang="en">From Vector to cuVS</p>
+      <p class="speaker">伊洪 / Hong Yi · 开源爱好者</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+    <article class="lightning-item" id="yuu">
+      <h4 class="talk-title">15:20–15:30 · Coding Agent 的历史应当成为基础设施：为 Agent 和人类建立可信的 Session 检索层</h4>
+      <p class="talk-title-en" lang="en">Your Coding Agent&#39;s History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans</p>
+      <p class="speaker">Yuu · Dify 实习生</p>
+      <span class="duration">10 分钟分享 · 无 QA</span>
+    </article>
+  </div>
+</div>        <div class="slot break">
           <span class="time">15:30–15:50</span>
           <p class="talk-title">茶歇 · 20 分钟</p>
           <p class="talk-title-en" lang="en">Tea Break</p>
         </div>
-        <article class="slot" id="wangqun-pan">
+<article class="slot" id="nagato-yuzuru">
   <span class="time">15:50–16:30</span>
-  <h4 class="talk-title">让 AI 能力可构建、可复用、可协作：商汤小浣熊 Skill 与专家团开发者实践</h4>
-  <p class="talk-title-en" lang="en">Making AI Capabilities Buildable, Reusable, and Collaborative: SenseTime Xiaohuanxiong Skill and Expert Team Developer Practices</p>
-  <p class="speaker">潘王群 / Wangqun Pan · 商汤科技高级产品运营经理、小浣熊家族开发者生态负责人</p>
+  <h4 class="talk-title">别在 YAML 里手写解释器：把规则写成一门内嵌 DSL</h4>
+  <p class="talk-title-en" lang="en">Stop Writing Interpreters in YAML: Rules as an Embedded DSL</p>
+  <p class="speaker">陈长 / Nagato Yuzuru · TerraQuanta 后端与基础设施工程师</p>
   <span class="duration">35 分钟分享 + 5 分钟 QA</span>
-</article>
-        <div class="slot lightning-block">
-          <span class="time">16:30–17:10 · 闪电演讲</span>
-          <div class="lightning-list">
-            <article class="lightning-item" id="luxiaowei">
-              <h4 class="talk-title">16:30–16:40 · 自由线程迁移指南</h4>
-              <p class="talk-title-en" lang="en">Migrating to Free-Threaded Python</p>
-              <p class="speaker">逯晓威 / Lu Xiaowei · 阿里云编译器团队高级开发工程师</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="luminolt">
-              <h4 class="talk-title">16:40–16:50 · 聊聊 Python 里的哈希函数：从 vLLM 链式哈希的演进说起</h4>
-              <p class="talk-title-en" lang="en">Let&#39;s Talk About Hash Functions in Python: Lessons from vLLM&#39;s Chained Hashing Evolution</p>
-              <p class="speaker">LuminolT · 上海交通大学计算机学院硕士研究生、TAI 成员</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="wei-yue">
-              <h4 class="talk-title">16:50–17:00 · Python 不只是写代码：用 Python + AI 重塑幼儿园教师的工作流</h4>
-              <p class="talk-title-en" lang="en">Python Beyond Coding: Reshaping Kindergarten Teachers&#39; Workflows with Python + AI</p>
-              <p class="speaker">岳炜 / Wei Yue · 教师，幼儿园技术支持</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-            <article class="lightning-item" id="quan-yang">
-              <h4 class="talk-title">17:00–17:10 · Agent 时代的产品工程</h4>
-              <p class="talk-title-en" lang="en">Product Engineering in the Agent Era</p>
-              <p class="speaker">杨权 / Quan Yang · 同声智能创始人</p>
-              <span class="duration">10 分钟分享 · 无 QA</span>
-            </article>
-          </div>
-        </div>
-      </section>
+</article><article class="slot" id="wenyang-wang">
+  <span class="time">16:30–17:10</span>
+  <h4 class="talk-title">Python DSL 添加 LSP 总共分几步</h4>
+  <p class="talk-title-en" lang="en">How Many Steps Does It Take to Add LSP to a Python DSL?</p>
+  <p class="speaker">王文洋 / Wenyang Wang · AI Inference 工程师</p>
+  <span class="duration">35 分钟分享 + 5 分钟 QA</span>
+</article>      </section>
     </div>
 
     <aside class="notes">
@@ -427,7 +404,9 @@
         <li>上午主会场为 09:30–12:10，共 4 场分享。</li>
         <li>午餐与开源集市为 12:10–13:30。</li>
         <li>茶歇统一为 15:30–15:50，
-          共 20 分钟；C、D、E 会场安排闪电演讲。</li>
+          共 20 分钟。</li>
+        <li>闪电演讲专场：A 会场 13:30–14:10（4 场）；E 会场 14:50–15:30（4 场）；D 会场 15:50–16:30（4 场）。
+          各专场时间互不重叠，且每个会场都以标准演讲收尾。</li>
       </ul>
     </aside>
   </main>

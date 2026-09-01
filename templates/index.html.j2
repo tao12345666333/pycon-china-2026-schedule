@@ -2,6 +2,22 @@
 {{ talk.talk_minutes }} 分钟分享{% if talk.qa_minutes %} + {{ talk.qa_minutes }} 分钟 QA{% else %} · 无 QA{% endif %}
 {%- endmacro %}
 
+{% macro lightning_block(item) -%}
+<div class="slot lightning-block">
+  <span class="time">{{ item.start }}–{{ item.end }} · 闪电演讲 ×{{ item.talks | length }}</span>
+  <div class="lightning-list">
+    {% for talk in item.talks %}
+    <article class="lightning-item" id="{{ talk.id }}">
+      <h4 class="talk-title">{{ talk.start }}–{{ talk.end }} · {{ talk.title }}</h4>
+      <p class="talk-title-en" lang="en">{{ talk.title_en }}</p>
+      <p class="speaker">{{ talk.speaker }}{% if talk.speaker_en != talk.speaker %} / {{ talk.speaker_en }}{% endif %} · {{ talk.role }}</p>
+      <span class="duration">{{ talk_duration(talk) }}</span>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{%- endmacro %}
+
 {% macro breakout_talk(talk) -%}
 <article class="slot" id="{{ talk.id }}">
   <span class="time">{{ talk.start }}–{{ talk.end }}</span>
@@ -31,8 +47,8 @@
         {{ agenda.conference.registration.title }} {{ agenda.conference.registration.start }}–{{ agenda.conference.registration.end }}；
         上午主会场 {{ schedule.morning_start }}–{{ schedule.morning_end }}，下午 {{ track_ids | length }} 个分会场
         {{ schedule.afternoon_start }}–{{ schedule.afternoon_end }}。{{ agenda.conference.tea_break.title }}
-        {{ agenda.conference.tea_break.start }}–{{ agenda.conference.tea_break.end }}，闪电演讲最早于
-        {{ schedule.lightning_start }} 开始。
+        {{ agenda.conference.tea_break.start }}–{{ agenda.conference.tea_break.end }}，{{ counts.lightning }}
+        场闪电演讲编成 {{ schedule.lightning_blocks | length }} 个错时专场，可依次听完。
       </p>
       <div class="meta">
         <span class="pill">{{ agenda.conference.theme }}</span>
@@ -99,8 +115,9 @@
     <div class="section-head">
       <div><span class="eyebrow">Afternoon</span><h2>下午 · {{ track_ids | length }} 个分会场</h2></div>
       <p>{{ schedule.afternoon_start }} 开始，{{ agenda.conference.tea_break.start }}–{{ agenda.conference.tea_break.end }}
-        统一{{ agenda.conference.tea_break.title }}；{{ schedule.lightning_tracks | join("、") }} 会场于
-        {{ schedule.lightning_start }} 起安排闪电演讲。</p>
+        统一{{ agenda.conference.tea_break.title }}。闪电演讲专场彼此错时安排在
+        {% for block in schedule.lightning_blocks %}{{ block.track }} 会场 {{ block.start }}–{{ block.end }}（{{ block.count }} 场）{% if not loop.last %}、{% endif %}{% endfor %}，
+        因此同一位听众可以完整听完全部 {{ counts.lightning }} 场闪电演讲。</p>
     </div>
 
     <div class="tracks">
@@ -112,32 +129,17 @@
           <p class="track-name-en" lang="en">{{ track.name_en }}</p>
           <p>{{ track.description }}</p>
         </div>
-        {% for talk in breakouts[track_id].standard_before_break %}
-        {{ breakout_talk(talk) }}
+        {% for item in breakouts[track_id].before_break %}
+        {% if item.type == "lightning" %}{{ lightning_block(item) }}{% else %}{{ breakout_talk(item.talk) }}{% endif %}
         {% endfor %}
         <div class="slot break">
           <span class="time">{{ agenda.conference.tea_break.start }}–{{ agenda.conference.tea_break.end }}</span>
           <p class="talk-title">{{ agenda.conference.tea_break.title }} · {{ schedule.tea_break_minutes }} 分钟</p>
           <p class="talk-title-en" lang="en">{{ agenda.conference.tea_break.title_en }}</p>
         </div>
-        {% for talk in breakouts[track_id].standard_after_break %}
-        {{ breakout_talk(talk) }}
+        {% for item in breakouts[track_id].after_break %}
+        {% if item.type == "lightning" %}{{ lightning_block(item) }}{% else %}{{ breakout_talk(item.talk) }}{% endif %}
         {% endfor %}
-        {% if breakouts[track_id].lightning %}
-        <div class="slot lightning-block">
-          <span class="time">{{ breakouts[track_id].lightning[0].start }}–{{ breakouts[track_id].lightning[-1].end }} · 闪电演讲</span>
-          <div class="lightning-list">
-            {% for talk in breakouts[track_id].lightning %}
-            <article class="lightning-item" id="{{ talk.id }}">
-              <h4 class="talk-title">{{ talk.start }}–{{ talk.end }} · {{ talk.title }}</h4>
-              <p class="talk-title-en" lang="en">{{ talk.title_en }}</p>
-              <p class="speaker">{{ talk.speaker }}{% if talk.speaker_en != talk.speaker %} / {{ talk.speaker_en }}{% endif %} · {{ talk.role }}</p>
-              <span class="duration">{{ talk_duration(talk) }}</span>
-            </article>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
       </section>
       {% endfor %}
     </div>
@@ -149,7 +151,9 @@
         <li>上午主会场为 {{ schedule.morning_start }}–{{ schedule.morning_end }}，共 {{ morning | length }} 场分享。</li>
         <li>{{ agenda.conference.lunch.title }}为 {{ agenda.conference.lunch.start }}–{{ agenda.conference.lunch.end }}。</li>
         <li>{{ agenda.conference.tea_break.title }}统一为 {{ agenda.conference.tea_break.start }}–{{ agenda.conference.tea_break.end }}，
-          共 {{ schedule.tea_break_minutes }} 分钟；{{ schedule.lightning_tracks | join("、") }} 会场安排闪电演讲。</li>
+          共 {{ schedule.tea_break_minutes }} 分钟。</li>
+        <li>闪电演讲专场：{% for block in schedule.lightning_blocks %}{{ block.track }} 会场 {{ block.start }}–{{ block.end }}（{{ block.count }} 场）{% if not loop.last %}；{% endif %}{% endfor %}。
+          各专场时间互不重叠，且每个会场都以标准演讲收尾。</li>
       </ul>
     </aside>
   </main>

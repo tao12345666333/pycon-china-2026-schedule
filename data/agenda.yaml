@@ -23,7 +23,7 @@ conference:
     end: "15:50"
     title: "茶歇"
     title_en: "Tea Break"
-  lightning_start: "16:30"
+  lightning_start: "13:30"
 
 tracks:
   main:
@@ -31,27 +31,28 @@ tracks:
     name_en: "Main Stage"
     description: "全体会议"
   A:
-    name: "Python 内核与系统工程"
-    name_en: "Python Core & Systems Engineering"
-    description: "聚焦 CPython 内核演进、并发与虚拟化实践、规则 DSL 与底层工程能力"
+    name: "Python 运行时、并发与系统"
+    name_en: "Python Runtime, Concurrency & Systems"
+    description: "Free-Threading 专题贯穿全场，延伸至虚拟化、底层观测与存储系统"
   B:
-    name: "Agent 架构与开发工具"
-    name_en: "Agent Architecture & Developer Tools"
-    description: "围绕 Agent 协议标准、运行时设计、评测 Harness 与开发者工具链协同"
+    name: "Agent 工程：协议、运行时与可靠性"
+    name_en: "Agent Engineering: Protocols, Runtime & Reliability"
+    description: "从互操作协议到运行时与 Harness，最终收束到生产环境可靠性"
   C:
-    name: "数据智能与知识基础设施"
-    name_en: "Data Intelligence & Knowledge Infrastructure"
-    description: "关注数据质量治理、知识基础设施、向量计算与 AI 系统可靠性"
+    name: "数据、上下文与知识基础设施"
+    name_en: "Data, Context & Knowledge Infrastructure"
+    description: "数据建模与校验、上下文工程、知识库，以及数据智能的真实落地"
   D:
-    name: "产品生态与行业应用"
-    name_en: "Product Ecosystem & Industry Applications"
-    description: "覆盖产品平台化建设、行业落地案例、企业工作流与团队工程实践"
+    name: "产品、能力生态与行业应用"
+    name_en: "Products, Capability Ecosystems & Industry"
+    description: "Agent 产品与制度设计、企业软件、厂商能力生态与一线工作流"
   E:
-    name: "Python 生态与 AI 工程"
-    name_en: "Python Ecosystem & AI Engineering"
-    description: "面向 Python + AI 工程实战，讨论生态集成、能力平台与生产级稳定性"
+    name: "Python 语言、工具链与性能"
+    name_en: "Python Language, Toolchain & Performance"
+    description: "插件系统与 DSL 专题：从造一门语言，到造它的工具链与性能"
 
 talks:
+  # ---------------------------------------------------------------- 主会场（上午，不调整）
   - id: "yanjun-zhou"
     speaker: "周彦君"
     speaker_en: "Yanjun Zhou"
@@ -108,6 +109,9 @@ talks:
     talk_minutes: 40
     qa_minutes: 0
 
+  # ---------------------------------------------------------------- A：Python 运行时、并发与系统
+  # 叙事：Free-Threading 上游贡献 → 并发实战 → 底层观测 → 存储系统
+  #      闪电场再从 GIL 入门收束到迁移实践与系统小品
   - id: "edward-xu"
     speaker: "徐祥祥"
     speaker_en: "Edward Xu"
@@ -117,36 +121,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "13:30"
-    end: "14:10"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "nagato-yuzuru"
-    speaker: "陈长"
-    speaker_en: "Nagato Yuzuru"
-    role: "TerraQuanta 后端与基础设施工程师"
-    title: "别在 YAML 里手写解释器：把规则写成一门内嵌 DSL"
-    title_en: "Stop Writing Interpreters in YAML: Rules as an Embedded DSL"
-    type: "standard"
-    period: "afternoon"
-    track: "A"
     start: "14:10"
     end: "14:50"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "yuchen-zheng"
-    speaker: "郑雨辰"
-    speaker_en: "Yuchen Zheng"
-    role: "半导体行业相关从业者"
-    title: "使用 Python 观测 QEMU Guest 的状态"
-    title_en: "Monitoring QEMU Guest State using Python"
-    type: "standard"
-    period: "afternoon"
-    track: "A"
-    start: "14:50"
-    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -159,8 +135,22 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "15:50"
-    end: "16:30"
+    start: "14:50"
+    end: "15:30"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "yuchen-zheng"
+    speaker: "郑雨辰"
+    speaker_en: "Yuchen Zheng"
+    role: "半导体行业相关从业者"
+    title: "使用 Python 观测 QEMU Guest 的状态"
+    title_en: "Monitoring QEMU Guest State using Python"
+    type: "standard"
+    period: "afternoon"
+    track: "A"
+    start: "16:30"
+    end: "17:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -173,38 +163,10 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "16:30"
-    end: "17:10"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
-
-  - id: "frost-ming"
-    speaker: "明希"
-    speaker_en: "Frost Ming"
-    role: "Python 开源开发者"
-    title: "Python 包的插件系统设计"
-    title_en: "Designing Plugin Systems for Python Packages"
-    type: "standard"
-    period: "afternoon"
-    track: "E"
-    start: "13:30"
-    end: "14:10"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "luxiaowei"
-    speaker: "逯晓威"
-    speaker_en: "Lu Xiaowei"
-    role: "阿里云编译器团队高级开发工程师"
-    title: "自由线程迁移指南"
-    title_en: "Migrating to Free-Threaded Python"
-    type: "lightning"
-    period: "afternoon"
-    track: "E"
-    start: "16:30"
-    end: "16:40"
-    talk_minutes: 10
-    qa_minutes: 0
 
   - id: "muyao-yu"
     speaker: "余沐垚"
@@ -214,9 +176,23 @@ talks:
     title_en: "An Easy Introduction to the GIL and Free-Threading"
     type: "lightning"
     period: "afternoon"
-    track: "C"
-    start: "16:30"
-    end: "16:40"
+    track: "A"
+    start: "13:30"
+    end: "13:40"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "luxiaowei"
+    speaker: "逯晓威"
+    speaker_en: "Lu Xiaowei"
+    role: "阿里云编译器团队高级开发工程师"
+    title: "自由线程迁移指南"
+    title_en: "Migrating to Free-Threaded Python"
+    type: "lightning"
+    period: "afternoon"
+    track: "A"
+    start: "13:40"
+    end: "13:50"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -228,12 +204,28 @@ talks:
     title_en: "Testing Practices for Open Source Virtualization Infrastructure"
     type: "lightning"
     period: "afternoon"
-    track: "D"
-    start: "16:30"
-    end: "16:40"
+    track: "A"
+    start: "14:00"
+    end: "14:10"
     talk_minutes: 10
     qa_minutes: 0
 
+  - id: "xinyi-shen"
+    speaker: "沈馨怡"
+    speaker_en: "Xinyi Shen"
+    role: "上海市进才中学学生，Linux/Python 重度用户"
+    title: "基于 Python 运行时的 initramfs 与单文件 Linux 实现"
+    title_en: "Python-driven initramfs for Single-File Linux"
+    type: "lightning"
+    period: "afternoon"
+    track: "A"
+    start: "13:50"
+    end: "14:00"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  # ---------------------------------------------------------------- B：Agent 工程
+  # 叙事：互操作协议 → 交互运行时 → Harness 入门 → 长周期 Multi-Agent → 生产可靠性
   - id: "jun-han"
     speaker: "韩骏"
     speaker_en: "Jun Han"
@@ -262,20 +254,6 @@ talks:
     talk_minutes: 35
     qa_minutes: 5
 
-  - id: "gongmin-liu"
-    speaker: "刘功民"
-    speaker_en: "Gongmin Liu"
-    role: "Agent 架构师"
-    title: "面向长周期软件交付的 Multi-Agent Harness"
-    title_en: "A Multi-Agent Harness for Long-Cycle Software Delivery"
-    type: "standard"
-    period: "afternoon"
-    track: "B"
-    start: "14:50"
-    end: "15:30"
-    talk_minutes: 35
-    qa_minutes: 5
-
   - id: "yubin-zheng"
     speaker: "郑予彬"
     speaker_en: "Yubin Zheng"
@@ -285,132 +263,20 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "15:50"
-    end: "16:30"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "zhixiang-xu"
-    speaker: "许智翔"
-    speaker_en: "Zhixiang Xu"
-    role: "Code Agent 实践者"
-    title: "Code Agent 的 Context Management"
-    title_en: "Context Management for Code Agents"
-    type: "standard"
-    period: "afternoon"
-    track: "B"
-    start: "16:30"
-    end: "17:10"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "himanshu-sangshetti"
-    speaker: "Himanshu Sangshetti"
-    speaker_en: "Himanshu Sangshetti"
-    role: "Mem0 AI 工程师"
-    title: "用智能体在单卡 GPU 上自动做机器学习研究"
-    title_en: "Automating ML Research with Agents on a Single GPU"
-    type: "standard"
-    period: "afternoon"
-    track: "E"
-    start: "14:10"
-    end: "14:50"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "yuu"
-    speaker: "Yuu"
-    speaker_en: "Yuu"
-    role: "Dify 实习生"
-    title: "Coding Agent 的历史应当成为基础设施：为 Agent 和人类建立可信的 Session 检索层"
-    title_en: "Your Coding Agent's History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans"
-    type: "lightning"
-    period: "afternoon"
-    track: "C"
-    start: "17:00"
-    end: "17:10"
-    talk_minutes: 10
-    qa_minutes: 0
-
-  - id: "zhiwei-chen"
-    speaker: "陈志伟"
-    speaker_en: "Zhiwei Chen"
-    role: "AI 开发工程师"
-    title: "从选择器到语义：用 Python 实现视觉增强的 WebUI 测试"
-    title_en: "From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python"
-    type: "lightning"
-    period: "afternoon"
-    track: "D"
-    start: "17:00"
-    end: "17:10"
-    talk_minutes: 10
-    qa_minutes: 0
-
-  - id: "quan-yang"
-    speaker: "杨权"
-    speaker_en: "Quan Yang"
-    role: "同声智能创始人"
-    title: "Agent 时代的产品工程"
-    title_en: "Product Engineering in the Agent Era"
-    type: "lightning"
-    period: "afternoon"
-    track: "E"
-    start: "17:00"
-    end: "17:10"
-    talk_minutes: 10
-    qa_minutes: 0
-
-  - id: "manjusaka-li"
-    speaker: "李者璈"
-    speaker_en: "Manjusaka Li"
-    role: "Freelancer，开源爱好者"
-    title: "聊一下数据校验的边界：Pydantic 大吐槽"
-    title_en: "Let's Talk About the Boundaries of Data Validation — A Pydantic Rant"
-    type: "standard"
-    period: "afternoon"
-    track: "C"
-    start: "13:30"
-    end: "14:10"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "shihuan-zhang"
-    speaker: "张士欢"
-    speaker_en: "Shihuan Zhang"
-    role: "量化从业者"
-    title: "AI 指导交易：面对量化，何以中观？"
-    title_en: "AI-Guided Trading: How Can We Approach Quant Investing from a Meso Perspective?"
-    type: "standard"
-    period: "afternoon"
-    track: "C"
-    start: "14:10"
-    end: "14:50"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "weizhen-wang"
-    speaker: "王维真"
-    speaker_en: "Weizhen Wang"
-    role: "Co-founder & CTO, Nowledge Labs"
-    title: "Skein：为 AI 时代打造的嵌入式知识数据库"
-    title_en: "Skein: An Embedded Knowledge Database Built for the AI Era"
-    type: "standard"
-    period: "afternoon"
-    track: "C"
     start: "14:50"
     end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
-  - id: "zeyao-han"
-    speaker: "韩泽耀"
-    speaker_en: "Zeyao Han"
-    role: "沐曦股份应用生态负责人"
-    title: "从算力到智能体：沐曦开源学习项目实战"
-    title_en: "From Compute Power to AI Agents: Hands-on Open Source Learning Projects with MetaX"
+  - id: "gongmin-liu"
+    speaker: "刘功民"
+    speaker_en: "Gongmin Liu"
+    role: "Agent 架构师"
+    title: "面向长周期软件交付的 Multi-Agent Harness"
+    title_en: "A Multi-Agent Harness for Long-Cycle Software Delivery"
     type: "standard"
     period: "afternoon"
-    track: "C"
+    track: "B"
     start: "15:50"
     end: "16:30"
     talk_minutes: 35
@@ -424,54 +290,86 @@ talks:
     title_en: "When Your AI Agent Dies at 3 A.M. — Reliability Engineering for Agents"
     type: "standard"
     period: "afternoon"
-    track: "E"
+    track: "B"
+    start: "16:30"
+    end: "17:10"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  # ---------------------------------------------------------------- C：数据、上下文与知识基础设施
+  # 叙事：上下文工程 → 知识库 → 数据建模与校验 → 自动化研究 → 行业数据应用
+  - id: "zhixiang-xu"
+    speaker: "许智翔"
+    speaker_en: "Zhixiang Xu"
+    role: "Code Agent 实践者"
+    title: "Code Agent 的 Context Management"
+    title_en: "Context Management for Code Agents"
+    type: "standard"
+    period: "afternoon"
+    track: "C"
+    start: "13:30"
+    end: "14:10"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "weizhen-wang"
+    speaker: "王维真"
+    speaker_en: "Weizhen Wang"
+    role: "Co-founder & CTO, Nowledge Labs"
+    title: "Skein：为 AI 时代打造的嵌入式知识数据库"
+    title_en: "Skein: An Embedded Knowledge Database Built for the AI Era"
+    type: "standard"
+    period: "afternoon"
+    track: "C"
+    start: "14:10"
+    end: "14:50"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "manjusaka-li"
+    speaker: "李者璈"
+    speaker_en: "Manjusaka Li"
+    role: "Freelancer，开源爱好者"
+    title: "聊一下数据校验的边界：Pydantic 大吐槽"
+    title_en: "Let's Talk About the Boundaries of Data Validation — A Pydantic Rant"
+    type: "standard"
+    period: "afternoon"
+    track: "C"
     start: "14:50"
     end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
-  - id: "yihong-yuan"
-    speaker: "袁翊闳"
-    speaker_en: "Yihong Yuan"
-    role: "广东外语外贸大学学生"
-    title: "PySide6 开发的数据挖掘桌面端 AI Agent：Xenix"
-    title_en: "Xenix: A Data Mining Desktop AI Agent Built with PySide6"
-    type: "lightning"
+  - id: "himanshu-sangshetti"
+    speaker: "Himanshu Sangshetti"
+    speaker_en: "Himanshu Sangshetti"
+    role: "Mem0 AI 工程师"
+    title: "用智能体在单卡 GPU 上自动做机器学习研究"
+    title_en: "Automating ML Research with Agents on a Single GPU"
+    type: "standard"
     period: "afternoon"
     track: "C"
-    start: "16:40"
-    end: "16:50"
-    talk_minutes: 10
-    qa_minutes: 0
+    start: "15:50"
+    end: "16:30"
+    talk_minutes: 35
+    qa_minutes: 5
 
-  - id: "hong-yi"
-    speaker: "伊洪"
-    speaker_en: "Hong Yi"
-    role: "开源爱好者"
-    title: "From vector to cuVS"
-    title_en: "From Vector to cuVS"
-    type: "lightning"
+  - id: "shihuan-zhang"
+    speaker: "张士欢"
+    speaker_en: "Shihuan Zhang"
+    role: "量化从业者"
+    title: "AI 指导交易：面对量化，何以中观？"
+    title_en: "AI-Guided Trading: How Can We Approach Quant Investing from a Meso Perspective?"
+    type: "standard"
     period: "afternoon"
     track: "C"
-    start: "16:50"
-    end: "17:00"
-    talk_minutes: 10
-    qa_minutes: 0
+    start: "16:30"
+    end: "17:10"
+    talk_minutes: 35
+    qa_minutes: 5
 
-  - id: "luminolt"
-    speaker: "LuminolT"
-    speaker_en: "LuminolT"
-    role: "上海交通大学计算机学院硕士研究生、TAI 成员"
-    title: "聊聊 Python 里的哈希函数：从 vLLM 链式哈希的演进说起"
-    title_en: "Let's Talk About Hash Functions in Python: Lessons from vLLM's Chained Hashing Evolution"
-    type: "lightning"
-    period: "afternoon"
-    track: "E"
-    start: "16:40"
-    end: "16:50"
-    talk_minutes: 10
-    qa_minutes: 0
-
+  # ---------------------------------------------------------------- D：产品、能力生态与行业应用
+  # 叙事：Agent 制度与平台 → 企业软件 → 厂商能力生态 ×2 → 闪电场落到真实工作流
   - id: "yanli"
     speaker: "盐粒 Yanli"
     speaker_en: "Yanli"
@@ -495,36 +393,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "D"
-    start: "14:10"
-    end: "14:50"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "yan-lu"
-    speaker: "路晏"
-    speaker_en: "Yan Lu"
-    role: "Python 工程实践者"
-    title: "如何实现一个自己的 Python-DSL"
-    title_en: "How to Build Your Own Python DSL"
-    type: "standard"
-    period: "afternoon"
-    track: "D"
     start: "14:50"
     end: "15:30"
-    talk_minutes: 35
-    qa_minutes: 5
-
-  - id: "wenyang-wang"
-    speaker: "王文洋"
-    speaker_en: "Wenyang Wang"
-    role: "AI Inference 工程师"
-    title: "Python DSL 添加 LSP 总共分几步"
-    title_en: "How Many Steps Does It Take to Add LSP to a Python DSL?"
-    type: "standard"
-    period: "afternoon"
-    track: "D"
-    start: "15:50"
-    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -536,37 +406,65 @@ talks:
     title_en: "Making AI Capabilities Buildable, Reusable, and Collaborative: SenseTime Xiaohuanxiong Skill and Expert Team Developer Practices"
     type: "standard"
     period: "afternoon"
-    track: "E"
-    start: "15:50"
-    end: "16:30"
+    track: "D"
+    start: "16:30"
+    end: "17:10"
     talk_minutes: 35
     qa_minutes: 5
 
-  - id: "zeyang-lin"
-    speaker: "林泽阳"
-    speaker_en: "Zeyang Lin"
-    role: "独立开发者"
-    title: "是时候学点 Rust 了：从让 pip install 变快说起"
-    title_en: "It's Time to Learn (Some) Rust — Starting from a Faster pip install"
+  - id: "zeyao-han"
+    speaker: "韩泽耀"
+    speaker_en: "Zeyao Han"
+    role: "沐曦股份应用生态负责人"
+    title: "从算力到智能体：沐曦开源学习项目实战"
+    title_en: "From Compute Power to AI Agents: Hands-on Open Source Learning Projects with MetaX"
+    type: "standard"
+    period: "afternoon"
+    track: "D"
+    start: "14:10"
+    end: "14:50"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "yihong-yuan"
+    speaker: "袁翊闳"
+    speaker_en: "Yihong Yuan"
+    role: "广东外语外贸大学学生"
+    title: "PySide6 开发的数据挖掘桌面端 AI Agent：Xenix"
+    title_en: "Xenix: A Data Mining Desktop AI Agent Built with PySide6"
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "16:40"
-    end: "16:50"
+    start: "15:50"
+    end: "16:00"
     talk_minutes: 10
     qa_minutes: 0
 
-  - id: "xinyi-shen"
-    speaker: "沈馨怡"
-    speaker_en: "Xinyi Shen"
-    role: "上海市进才中学学生，Linux/Python 重度用户"
-    title: "基于 Python 运行时的 initramfs 与单文件 Linux 实现"
-    title_en: "Python-driven initramfs for Single-File Linux"
+  - id: "zhiwei-chen"
+    speaker: "陈志伟"
+    speaker_en: "Zhiwei Chen"
+    role: "AI 开发工程师"
+    title: "从选择器到语义：用 Python 实现视觉增强的 WebUI 测试"
+    title_en: "From Selectors to Semantics: Building Vision-Enhanced WebUI Testing with Python"
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "16:50"
-    end: "17:00"
+    start: "16:00"
+    end: "16:10"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "quan-yang"
+    speaker: "杨权"
+    speaker_en: "Quan Yang"
+    role: "同声智能创始人"
+    title: "Agent 时代的产品工程"
+    title_en: "Product Engineering in the Agent Era"
+    type: "lightning"
+    period: "afternoon"
+    track: "D"
+    start: "16:10"
+    end: "16:20"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -578,8 +476,123 @@ talks:
     title_en: "Python Beyond Coding: Reshaping Kindergarten Teachers' Workflows with Python + AI"
     type: "lightning"
     period: "afternoon"
+    track: "D"
+    start: "16:20"
+    end: "16:30"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  # ---------------------------------------------------------------- E：Python 语言、工具链与性能
+  # 叙事：插件系统 → 自建 DSL → 生产中的内嵌 DSL → 给 DSL 配 LSP
+  #      闪电场转向性能：语言细节、打包加速、向量检索、Agent 会话基础设施
+  - id: "frost-ming"
+    speaker: "明希"
+    speaker_en: "Frost Ming"
+    role: "Python 开源开发者"
+    title: "Python 包的插件系统设计"
+    title_en: "Designing Plugin Systems for Python Packages"
+    type: "standard"
+    period: "afternoon"
     track: "E"
-    start: "16:50"
-    end: "17:00"
+    start: "13:30"
+    end: "14:10"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "yan-lu"
+    speaker: "路晏"
+    speaker_en: "Yan Lu"
+    role: "Python 工程实践者"
+    title: "如何实现一个自己的 Python-DSL"
+    title_en: "How to Build Your Own Python DSL"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "14:10"
+    end: "14:50"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "nagato-yuzuru"
+    speaker: "陈长"
+    speaker_en: "Nagato Yuzuru"
+    role: "TerraQuanta 后端与基础设施工程师"
+    title: "别在 YAML 里手写解释器：把规则写成一门内嵌 DSL"
+    title_en: "Stop Writing Interpreters in YAML: Rules as an Embedded DSL"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "15:50"
+    end: "16:30"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "wenyang-wang"
+    speaker: "王文洋"
+    speaker_en: "Wenyang Wang"
+    role: "AI Inference 工程师"
+    title: "Python DSL 添加 LSP 总共分几步"
+    title_en: "How Many Steps Does It Take to Add LSP to a Python DSL?"
+    type: "standard"
+    period: "afternoon"
+    track: "E"
+    start: "16:30"
+    end: "17:10"
+    talk_minutes: 35
+    qa_minutes: 5
+
+  - id: "luminolt"
+    speaker: "LuminolT"
+    speaker_en: "LuminolT"
+    role: "上海交通大学计算机学院硕士研究生、TAI 成员"
+    title: "聊聊 Python 里的哈希函数：从 vLLM 链式哈希的演进说起"
+    title_en: "Let's Talk About Hash Functions in Python: Lessons from vLLM's Chained Hashing Evolution"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "14:50"
+    end: "15:00"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "zeyang-lin"
+    speaker: "林泽阳"
+    speaker_en: "Zeyang Lin"
+    role: "独立开发者"
+    title: "是时候学点 Rust 了：从让 pip install 变快说起"
+    title_en: "It's Time to Learn (Some) Rust — Starting from a Faster pip install"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "15:00"
+    end: "15:10"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "hong-yi"
+    speaker: "伊洪"
+    speaker_en: "Hong Yi"
+    role: "开源爱好者"
+    title: "From vector to cuVS"
+    title_en: "From Vector to cuVS"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "15:10"
+    end: "15:20"
+    talk_minutes: 10
+    qa_minutes: 0
+
+  - id: "yuu"
+    speaker: "Yuu"
+    speaker_en: "Yuu"
+    role: "Dify 实习生"
+    title: "Coding Agent 的历史应当成为基础设施：为 Agent 和人类建立可信的 Session 检索层"
+    title_en: "Your Coding Agent's History Should Be Infrastructure: Building a Trusted Session Retrieval Layer for Agents and Humans"
+    type: "lightning"
+    period: "afternoon"
+    track: "E"
+    start: "15:20"
+    end: "15:30"
     talk_minutes: 10
     qa_minutes: 0
