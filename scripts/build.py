@@ -25,8 +25,8 @@ def validate(agenda: dict) -> None:
     tracks = agenda["tracks"]
     talks = agenda["talks"]
 
-    if len(talks) != 46:
-        raise ValueError(f"Expected 46 talks, found {len(talks)}")
+    if len(talks) != 38:
+        raise ValueError(f"Expected 38 talks, found {len(talks)}")
 
     ids = [talk["id"] for talk in talks]
     if len(ids) != len(set(ids)):
