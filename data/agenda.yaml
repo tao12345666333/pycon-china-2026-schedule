@@ -3,7 +3,7 @@ conference:
   theme: "AI for Good"
   status: "议程草案"
   city: "待确认"
-  venue: "待确认"
+  venue: "综合楼"
   date: "待确认"
   timezone: "Asia/Shanghai"
   start: "09:00"
@@ -30,26 +30,32 @@ tracks:
     name: "主会场"
     name_en: "Main Stage"
     description: "全体会议"
+    location: "综合楼 506 报告厅"
   A:
     name: "Python 运行时、并发与系统"
     name_en: "Python Runtime, Concurrency & Systems"
     description: "Free-Threading 专题贯穿全场，延伸至虚拟化、底层观测与存储系统"
+    location: "综合楼 506 报告厅"
   B:
     name: "Agent 工程：协议、运行时与可靠性"
     name_en: "Agent Engineering: Protocols, Runtime & Reliability"
     description: "从互操作协议到运行时与 Harness，最终收束到生产环境可靠性"
+    location: "综合楼 434 会议室"
   C:
     name: "数据、上下文与知识基础设施"
     name_en: "Data, Context & Knowledge Infrastructure"
     description: "数据建模与校验、上下文工程、知识库，以及数据智能的真实落地"
+    location: "综合楼 421 会议室"
   D:
     name: "产品、能力生态与行业应用"
     name_en: "Products, Capability Ecosystems & Industry"
     description: "Agent 产品与制度设计、企业软件、厂商能力生态与一线工作流"
+    location: "综合楼 326 会议室"
   E:
     name: "Python 语言、工具链与性能"
     name_en: "Python Language, Toolchain & Performance"
     description: "插件系统与 DSL 专题：从造一门语言，到造它的工具链与性能"
+    location: "综合楼 108 报告厅"
 
 talks:
   # ---------------------------------------------------------------- 主会场（上午，不调整）
