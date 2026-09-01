@@ -7,7 +7,7 @@ conference:
   date: "待确认"
   timezone: "Asia/Shanghai"
   start: "09:00"
-  end: "17:40"
+  end: "17:10"
   registration:
     start: "09:00"
     end: "09:30"
@@ -15,15 +15,15 @@ conference:
     title_en: "Registration & Check-in"
   lunch:
     start: "12:10"
-    end: "14:00"
+    end: "13:30"
     title: "午餐与开源集市"
     title_en: "Lunch & Open Source Bazaar"
   tea_break:
-    start: "16:00"
-    end: "16:20"
+    start: "15:30"
+    end: "15:50"
     title: "茶歇"
     title_en: "Tea Break"
-  lightning_start: "17:00"
+  lightning_start: "16:30"
 
 tracks:
   main:
@@ -117,8 +117,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "14:00"
-    end: "14:40"
+    start: "13:30"
+    end: "14:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -131,8 +131,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "14:40"
-    end: "15:20"
+    start: "14:10"
+    end: "14:50"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -145,8 +145,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "15:20"
-    end: "16:00"
+    start: "14:50"
+    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -159,8 +159,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "16:20"
-    end: "17:00"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -173,8 +173,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "A"
-    start: "17:00"
-    end: "17:40"
+    start: "16:30"
+    end: "17:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -187,8 +187,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "E"
-    start: "14:00"
-    end: "14:40"
+    start: "13:30"
+    end: "14:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -201,8 +201,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "17:00"
-    end: "17:10"
+    start: "16:30"
+    end: "16:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -215,8 +215,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "17:00"
-    end: "17:10"
+    start: "16:30"
+    end: "16:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -229,8 +229,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "17:00"
-    end: "17:10"
+    start: "16:30"
+    end: "16:40"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -243,8 +243,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "14:00"
-    end: "14:40"
+    start: "13:30"
+    end: "14:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -257,8 +257,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "14:40"
-    end: "15:20"
+    start: "14:10"
+    end: "14:50"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -271,8 +271,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "15:20"
-    end: "16:00"
+    start: "14:50"
+    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -285,8 +285,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "16:20"
-    end: "17:00"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -299,8 +299,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "B"
-    start: "17:00"
-    end: "17:40"
+    start: "16:30"
+    end: "17:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -313,8 +313,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "E"
-    start: "14:40"
-    end: "15:20"
+    start: "14:10"
+    end: "14:50"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -327,8 +327,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "17:30"
-    end: "17:40"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -341,8 +341,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "17:30"
-    end: "17:40"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -355,8 +355,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "17:30"
-    end: "17:40"
+    start: "17:00"
+    end: "17:10"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -369,8 +369,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "C"
-    start: "14:00"
-    end: "14:40"
+    start: "13:30"
+    end: "14:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -383,8 +383,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "C"
-    start: "14:40"
-    end: "15:20"
+    start: "14:10"
+    end: "14:50"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -397,8 +397,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "C"
-    start: "15:20"
-    end: "16:00"
+    start: "14:50"
+    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -411,8 +411,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "C"
-    start: "16:20"
-    end: "17:00"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -425,8 +425,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "E"
-    start: "15:20"
-    end: "16:00"
+    start: "14:50"
+    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -439,8 +439,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "17:10"
-    end: "17:20"
+    start: "16:40"
+    end: "16:50"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -453,8 +453,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "C"
-    start: "17:20"
-    end: "17:30"
+    start: "16:50"
+    end: "17:00"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -467,8 +467,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "17:10"
-    end: "17:20"
+    start: "16:40"
+    end: "16:50"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -481,8 +481,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "D"
-    start: "14:00"
-    end: "14:40"
+    start: "13:30"
+    end: "14:10"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -495,8 +495,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "D"
-    start: "14:40"
-    end: "15:20"
+    start: "14:10"
+    end: "14:50"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -509,8 +509,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "D"
-    start: "15:20"
-    end: "16:00"
+    start: "14:50"
+    end: "15:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -523,8 +523,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "D"
-    start: "16:20"
-    end: "17:00"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -537,8 +537,8 @@ talks:
     type: "standard"
     period: "afternoon"
     track: "E"
-    start: "16:20"
-    end: "17:00"
+    start: "15:50"
+    end: "16:30"
     talk_minutes: 35
     qa_minutes: 5
 
@@ -551,8 +551,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "17:10"
-    end: "17:20"
+    start: "16:40"
+    end: "16:50"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -565,8 +565,8 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "D"
-    start: "17:20"
-    end: "17:30"
+    start: "16:50"
+    end: "17:00"
     talk_minutes: 10
     qa_minutes: 0
 
@@ -579,7 +579,7 @@ talks:
     type: "lightning"
     period: "afternoon"
     track: "E"
-    start: "17:20"
-    end: "17:30"
+    start: "16:50"
+    end: "17:00"
     talk_minutes: 10
     qa_minutes: 0
